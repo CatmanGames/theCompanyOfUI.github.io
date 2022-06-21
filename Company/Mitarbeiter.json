@@ -1,0 +1,47 @@
+{
+  "Mitarbeiter": [{
+    "Name": "Maximilian Teller",
+    "Telefonnummer": "17938/73602",
+    "Aufgaben": "Leitung - Geschäftsreise, Teller GMBH"
+  }, {
+    "Name": "Leo Jakobs",
+    "Telefonnummer": "17938/50044",
+    "Aufgaben": "Leitung, Central Informations"
+  }, {
+    "Name": "Mike Oxlong",
+    "Telefonnummer": "17938/11856",
+    "Aufgaben": "Leitung"
+  }, {
+    "Name": "Jeremy Dowoney",
+    "Telefonnummer": "17938/37806",
+    "Aufgaben": "Company Coin, Technische Verwaltung, DwC&H"
+  }, {
+    "Name": "Klaus Kowalski",
+    "Telefonnummer": "17938/67530",
+    "Aufgaben": "Chauffeur, Ghost Records"
+  }, {
+    "Name": "Patrick Löffel",
+    "Telefonnummer": "17938/66876",
+    "Aufgaben": "LöffelGMBH"
+  }, {
+    "Name": "Mason Smith",
+    "Telefonnummer": "17938/90391",
+    "Aufgaben": "SmithGMBH"
+  }, {
+    "Name": "John Dust",
+    "Telefonnummer": "17938/36795",
+    "Aufgaben": "Gateway Logistics"
+  }, {
+    "Name": "Marcel Urbel",
+    "Telefonnummer": "17938/18859",
+    "Aufgaben": "Mitarbeiter"
+  }, {
+    "Name": "Stanford Rowley",
+    "Telefonnummer": "17938/15211",
+    "Aufgaben": "Mitarbeiter"
+  }, {
+    "Name": "Giavani Gambino",
+    "Telefonnummer": "17938/78398",
+    "Aufgaben": "Mitarbeiter"
+  }]
+}

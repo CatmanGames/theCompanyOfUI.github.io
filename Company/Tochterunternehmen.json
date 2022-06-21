@@ -1,0 +1,31 @@
+{
+  "Tochterunternehmen": [{
+    "name": "DWCH",
+    "link": "https://thecompany.social/Company/images/DWCH.png",
+    "sendto": "https://dowoneywch.github.io"
+  }, {
+    "name": "Company Coin",
+    "link":"https://thecompany.social/Company/images/CompanyCoin.png",
+    "sendto": "https://coin.thecompany.social"
+  }, {
+    "name": "LöffelGMBH",
+    "link":"https://thecompany.social/Company/images/LöffelGMBH.png",
+    "sendto": "https://sites.google.com/view/loeffelgmbh"
+  }, {
+    "name": "Central Informations",
+    "link":"https://thecompany.social/Company/images/Central Informations.png",
+    "sendto": "https://united-islands.net/Central-Informations"
+  }, {
+    "name": "Company Gebrauchtwaffen",
+    "link": "https://thecompany.social/Company/images/Gebraucht-Handel.png",
+    "sendto": "https://thecompany.social"
+  }, {
+    "name": "TellerTree",
+    "link": "https://thecompany.social/Company/images/Teller%20Tree.png",
+    "sendto": "https://dowoneywch.github.io/TellerTree.html"
+  }, {
+    "name": "Ghost Records",
+    "link":"https://thecompany.social/Company/images/Ghost%20Records.png",
+    "sendto": "https://thecompany.social"
+  }]
+}

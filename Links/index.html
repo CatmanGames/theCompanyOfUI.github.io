@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://uipd.tech/images/logo_pd.png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <title>Company Utils</title>
+</head>
+<body>
+<div class="hero-container">
+    <div class="hero-logo">
+        <a href=""><img class="hero-logo-img" src="idk.png" alt=""></a>
+    </div>
+</div>
+
+<h1 id="linkcontainerh">Links</h1>
+<div class="links-container" id="linkcontainer">
+    <div class="flexchild alllinks" id="allglinks">
+        <h3>Allgemeine Links</h3>
+        <ul class="links-list">
+            <li><a href="https://docs.google.com/spreadsheets/d/1pduVWg3wSd8zBiHtE63z6Tu1S28IgRnnhz1jJWYIr9w/edit#gid=289003502-" target="_blank" rel="noopener noreferrer">Mechaniker</a></li>
+            <li><a href="https://drive.google.com/drive/u/0/folders/1IacKidwOJs6Ah14yCBNbI1nAUAnebCQc" target="_blank" rel="noopener noreferrer">Dowoney Web Creation & Hosting</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1gkBEM8g8gEEWAqJZniYAyifsxLQf99xtmdldo3-FF8U/edit#gid=1066260302" target="_blank" rel="noopener noreferrer">Central Informations</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1fFVBZjiFR_A_dAaZ8OvrLseVttRjgN2DkLHJg61zjIM/edit?pli=1#gid=426751614" target="_blank" rel="noopener noreferrer">Company</a></li>
+        </ul>
+    </div>
+    <div class="flexchild testlinks" id="testlinks">
+        <h3>Links</h3>
+        <ul class="links-list">
+            <li><a href="https://thecompany.social">Main Page</a></li>
+            <li><a href="https://coin.thecompany.social">Coin Page</a></li>
+            </ul>
+    </div>
+</div>
+<button id="linkbutton">Einklappen</button>
+</body>
+<script>
+    var counterNumber = 0;
+
+    document.getElementById("linkcontainerh").addEventListener("click", ev => {
+        counterNumber++
+        if(counterNumber === 3) window.location.href = "https://uipd.tech/clientarea/polarea/linkpage/index.html"
+    })
+</script>
+</html>

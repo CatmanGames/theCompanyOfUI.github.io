@@ -1,0 +1,155 @@
+<!-- Edit Layout in 'layout.css' -->
+
+
+<!DOCTYPE html>
+<!--[if lt IE 8 ]>
+<html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie ie8" lang="en"> <![endif]-->
+
+<!--suppress JSUnresolvedVariable -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <!--- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Company</title>
+    <meta name="author" content="Dowoney-Web-Creating-&-Hosting">
+
+    <meta property="og:image" content="https://thecompany.social/Company/images/Gold_Dreiecke_Immobilien_Visitenkarte.jpg" />
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="Company/css/default.css">
+    <link rel="stylesheet" href="Company/css/layout.css">
+    <link rel="stylesheet" href="Company/css/media-queries.css">
+    <link rel="stylesheet" href="Company/css/magnific-popup.css">
+
+    <!-- Script
+    ================================================== -->
+    <script src="Company/js/modernizr.js"></script>
+
+    <!-- Favicons
+     ================================================== -->
+    <link rel="shortcut icon" type="image/png" href="Company/images/Logo_Kurz_small.png">
+
+</head>
+
+<body>
+
+<!-- Header
+================================================== -->
+<header id="home">
+    <div class="row banner">
+        <div class="banner-text">
+            <h1 class="responsive-headline">Company</h1>
+            <hr/>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Section
+================================================== -->
+<section id="section1" style="min-height: 1000px">
+    <div class="info-company">
+        <h3>Was ist die Company?</h3>
+        <p>Die Company ist eine Vereinigung von Unternehmen verschiedenster Firmen und Personen,<br>
+            verschiedenster Branchen mit gleichen Interessen und Zielen. Sie wird zum aktuellen<br>
+            Zeitpunkt durch Leo Jakobs & Mike Oxlong geleitet und ist im Kirchweg 2 aufzufinden.
+        </p>
+
+
+    </div>
+    <p class="section1-head">Tochterunternehmen:</p>
+    <!-- Dynamicly added Images with Links -->
+</section>
+<section id="Mitarbeiter">
+    <p class="Mitarbeiter-head">Mitarbeiter</p>
+</section>
+
+
+<footer>
+    <div class="row">
+        <div class="twelve columns">
+            <li class="address">
+                Company<br>
+                Kirchenweg 2,<br>
+                Central Bay.<br>
+            </li>
+            <ul class="copyright">
+                <li>DWCH &copy; Copyright 2022</li>
+                <li>Provided by <a href="http://DowoneyWCH.github.io" title="" target="_blank">Dowoney Web Creation & Hosting</a>
+                </li>
+            </ul>
+        </div>
+        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+    </div>
+</footer>
+<!-- ================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="Company/js/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="Company/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="Company/js/jquery.flexslider.js"></script>
+<script src="Company/js/waypoints.js"></script>
+<script src="Company/js/jquery.fittext.js"></script>
+<script src="Company/js/magnific-popup.js"></script>
+<script src="Company/js/init.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        //Get input from json file and make img from it
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/Company/Tochterunternehmen.json", true);
+        xhr.send();
+            xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var json = JSON.parse(xhr.responseText);
+                //For loop to make img from json
+
+                for (var key in json) {
+                    for (var i = 0; i < json[key].length; i++) {
+                        var img = document.createElement("img");
+                        img.src = json[key][i].link;
+                        var link = json[key][i].sendto;
+                        img.classList.add("form");
+                        img.setAttribute("onclick", "window.location.href='" + link + "'");
+                        document.getElementById("section1").appendChild(img);
+                    }
+                }
+            }
+        }
+        var xhrreq = new XMLHttpRequest();
+        xhrreq.open("GET", "/Company/Mitarbeiter.json", true);
+        xhrreq.send();
+        xhrreq.onreadystatechange = function () {
+            if (xhrreq.readyState === 4 && xhrreq.status === 200) {
+                var jsonresp = JSON.parse(xhrreq.responseText);
+
+                for (var key in jsonresp) {
+                    for (var i = 0; i < jsonresp[key].length; i++) {
+                        var div = document.createElement("div");
+
+                        var name = jsonresp[key][i].Name;
+                        var telefonnummer = jsonresp[key][i].Telefonnummer;
+                        var aufgaben = jsonresp[key][i].Aufgaben;
+
+                        div.innerHTML = "<h3>" + name + "</h3><p>" + telefonnummer + "</p><p>" + aufgaben + "</p>";
+
+                        div.classList.add("Mitarbeiter-Form");
+
+                        document.getElementById("Mitarbeiter").appendChild(div);
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
